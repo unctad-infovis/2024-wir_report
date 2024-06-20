@@ -7,12 +7,12 @@ function Footer() {
         <h2>What do you want to do next?</h2>
         <div className="footer_elements">
           <div className="footer_element footer_element_1">
-            <div className="footer_content anchor_videos hidden" id="anchor_videos">
+            <div className="footer_content anchor_videos" id="anchor_videos">
               <h3>Watch the videos</h3>
               <div className="iframe_container youtube_iframe">
-                <iframe src="https://www.youtube.com/embed/duZBRPcX9mo" title="Wold Investment Report" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                <iframe src="https://www.youtube.com/embed/OwrpyKlK1vw" title="Wold Investment Report" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
               </div>
-              <ul>
+              <ul className="hidden">
                 <li>
                   <a href="https://youtu.be/sNY2fjq2E1w" target="_blank" rel="noreferrer">Français</a>
                   {', '}
@@ -32,8 +32,8 @@ function Footer() {
               <h4>Download the report video</h4>
               <ul>
                 <li>
-                  <a href="https://vimeo.com/842219310" target="_blank" rel="noreferrer">English</a>
-                  {', '}
+                  <a href="https://vimeo.com/963048216" target="_blank" rel="noreferrer">English</a>
+                  {/* {', '}
                   <a href="https://vimeo.com/842219331" target="_blank" rel="noreferrer">Français</a>
                   {', '}
                   <a href="https://vimeo.com/842219459" target="_blank" rel="noreferrer">Español</a>
@@ -46,13 +46,13 @@ function Footer() {
                   {', '}
                   <a href="https://vimeo.com/842219402" target="_blank" rel="noreferrer">Português</a>
                   {', '}
-                  <a href="https://vimeo.com/842219366" target="_blank" rel="noreferrer">Kiswahili</a>
+                  <a href="https://vimeo.com/842219366" target="_blank" rel="noreferrer">Kiswahili</a> */}
                 </li>
               </ul>
-              <h4>Watch the press conference</h4>
+              {/* <h4>Watch the press conference</h4>
               <div className="iframe_container youtube_iframe">
                 <iframe src="https://www.youtube.com/embed/rUR6isHC8MI" title="Wold Investment Report Press Conference" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-              </div>
+              </div> */}
             </div>
             <div className="footer_content anchor_podcasts" id="anchor_podcasts">
               <h3>Podcasts</h3>

@@ -227,7 +227,7 @@ function App() {
               color: 'rgba(0, 0, 0, 0.8)',
               fontSize: '14px'
             },
-            text: '<em>Source:</em> UNCTAD World Investment Report 2023',
+            text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2024',
             verticalAlign: 'bottom',
             x: 0
           },
@@ -271,7 +271,7 @@ function App() {
             x: 64
           }
         },
-        filename: 'world_investment_report_2023_selected_fdi_flows'
+        filename: 'unctad_world_investment_report_selected_fdi_flows'
       },
       legend: {
         align: 'left',
@@ -300,7 +300,7 @@ function App() {
           // eslint-disable-next-line react/no-this-in-sfc
           const values = this.points.map(point => [point.series.name, point.y, point.color]).sort((a, b) => (a[1] < b[1] ? 1 : -1));
           const rows = [];
-          rows.push(values.map(point => `<div style="color: ${point[2]}"><span class="tooltip_label">${point[0]}:</span> <span class="tooltip_value">${formatNr(roundNr(point[1], 0), ' ', ' million', '$')}</span></div>`).join(''));
+          rows.push(values.map(point => `<div style="color: ${point[2]}"><span class="tooltip_label">${point[0]}:</span> <span class="tooltip_value">${formatNr(roundNr(point[1], 0), ' ', '', '')}</span></div>`).join(''));
           // eslint-disable-next-line react/no-this-in-sfc
           return `<div class="tooltip_container"><h3 class="tooltip_header">Year ${this.x}</h3>${rows}</div>`;
         },
