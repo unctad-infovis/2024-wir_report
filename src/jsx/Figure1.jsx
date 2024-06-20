@@ -7,6 +7,9 @@ import highchartsAccessibility from 'highcharts/modules/accessibility';
 import highchartsExporting from 'highcharts/modules/exporting';
 import highchartsExportData from 'highcharts/modules/export-data';
 
+// https://www.npmjs.com/package/uuid4
+import uuid4 from 'uuid4';
+
 // Load helpers.
 import formatNr from './helpers/FormatNr.js';
 import roundNr from './helpers/RoundNr.js';
@@ -154,6 +157,13 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    if (document.querySelector('.title_container .unctad_logo img')) {
+      document.querySelector('.title_container .unctad_logo img').src = '/themes/custom/newyork_b5/images/logo_small_white_en.png';
+      document.querySelector('.title_container .unctad_logo img').style.width = '300px';
+    }
+  }, []);
+
   const createChart = useCallback(() => {
     chart = Highcharts.chart('highchart-container', {
       chart: {
@@ -183,7 +193,7 @@ function App() {
             },
             stroke: '#7c7067',
             style: {
-              fontFamily: 'Roboto',
+              fontFamily: 'Inter',
               fontSize: 13,
               fontWeight: 400
             }
@@ -191,7 +201,7 @@ function App() {
         },
         style: {
           color: '#7c7067',
-          fontFamily: 'Roboto',
+          fontFamily: 'Inter',
           fontWeight: 400
         },
         zoomType: 'x'
@@ -225,7 +235,7 @@ function App() {
             events: {
               load() {
                 // eslint-disable-next-line react/no-this-in-sfc
-                this.renderer.image('https://storage.unctad.org/2024-wir_report/assets/img/unctad_logo.svg', 5, 15, 100, 100).add();
+                this.renderer.image('https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg', 15, 15, 44, 43.88).add();
               }
             },
             height: 600,
@@ -245,7 +255,7 @@ function App() {
             },
             text: 'By selected region or economy in selected time period',
             widthAdjust: -120,
-            x: 100
+            x: 64
           },
           title: {
             align: 'left',
@@ -258,7 +268,7 @@ function App() {
             },
             text: 'Foreign direct investment flows',
             widthAdjust: -120,
-            x: 100
+            x: 64
           }
         },
         filename: 'world_investment_report_2023_selected_fdi_flows'
@@ -269,7 +279,7 @@ function App() {
         itemStyle: {
           color: '#000',
           cursor: 'default',
-          fontFamily: 'Roboto',
+          fontFamily: 'Inter',
           fontSize: '14px',
           fontWeight: 400
         },
@@ -298,7 +308,7 @@ function App() {
         shared: true,
         style: {
           color: '#7c7067',
-          fontFamily: 'Roboto',
+          fontFamily: 'Inter',
           fontSize: 13,
           fontWeight: 400
         },
@@ -360,7 +370,7 @@ function App() {
           rotation: 0,
           style: {
             color: 'rgba(0, 0, 0, 0.8)',
-            fontFamily: 'Roboto',
+            fontFamily: 'Inter',
             fontSize: '14px',
             fontWeight: 400
           },
@@ -377,7 +387,7 @@ function App() {
           offset: 30,
           style: {
             color: 'rgba(0, 0, 0, 0.8)',
-            fontFamily: 'Roboto',
+            fontFamily: 'Inter',
             fontSize: '13px',
             fontWeight: 400
           },
@@ -398,7 +408,7 @@ function App() {
         labels: {
           style: {
             color: 'rgba(0, 0, 0, 0.8)',
-            fontFamily: 'Roboto',
+            fontFamily: 'Inter',
             fontSize: '14px',
             fontWeight: 400
           },
@@ -420,7 +430,7 @@ function App() {
           rotation: 0,
           style: {
             color: 'rgba(0, 0, 0, 0.8)',
-            fontFamily: 'Roboto',
+            fontFamily: 'Inter',
             fontSize: '13px',
             fontWeight: 400
           },
@@ -539,21 +549,22 @@ function App() {
   };
 
   const search = (event) => {
+    const visible_tmp = {};
     activeData.map(area => {
       if (event.target.value === '') {
-        visible[area.name] = true;
+        visible_tmp[area.name] = true;
       } else if (area.name.toLowerCase().includes(event.target.value.toLowerCase()) === true) {
-        visible[area.name] = true;
+        visible_tmp[area.name] = true;
         area.parents.map((parent) => {
-          visible[parent] = true;
+          visible_tmp[parent] = true;
           return true;
         });
       } else {
-        visible[area.name] = false;
+        visible_tmp[area.name] = false;
       }
       return true;
     });
-    setVisible(visible);
+    setVisible(visible_tmp);
   };
 
   // Not used.
@@ -636,7 +647,7 @@ function App() {
             <div className="legend_container">
               {
                 legend && legend.map(legend_item => (
-                  <button key={legend_item.name} style={{ color: legend_item.color }} onClick={() => chooseActiveData(legend_item)} title={`Remove ${legend_item.name} from the chart`} aria-label={`Remove ${legend_item.name} from the chart`} type="button">
+                  <button key={uuid4()} style={{ color: legend_item.color }} onClick={() => chooseActiveData(legend_item)} title={`Remove ${legend_item.name} from the chart`} aria-label={`Remove ${legend_item.name} from the chart`} type="button">
                     {legendIcon(legend_item.symbol, legend_item.color)}
                     {legend_item.name}
                   </button>

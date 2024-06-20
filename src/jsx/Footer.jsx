@@ -7,7 +7,7 @@ function Footer() {
         <h2>What do you want to do next?</h2>
         <div className="footer_elements">
           <div className="footer_element footer_element_1">
-            <div className="footer_content anchor_videos" id="anchor_videos">
+            <div className="footer_content anchor_videos hidden" id="anchor_videos">
               <h3>Watch the videos</h3>
               <div className="iframe_container youtube_iframe">
                 <iframe src="https://www.youtube.com/embed/duZBRPcX9mo" title="Wold Investment Report" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
@@ -58,8 +58,8 @@ function Footer() {
               <h3>Podcasts</h3>
               <p>Listen to the Weekly Tradecast episodes that explore some of the main issues in the report</p>
               <div className="iframe_container">
-                <iframe title="The Weekly Tradecast by UNCTAD" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=n2abc-144b4bb-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen />
-                <span className="text"><a href="/podcast/world-investment-report-2023-weak-fdi-threatens-clean-energy-transition-and-development">Weak FDI threatens clean energy transition and development goals</a></span>
+                <iframe title="The Weekly Tradecast by UNCTAD" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=fd59m-1646ff2-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen />
+                <span className="text"><a href="/podcast/world-investment-report-weaker-global-flows-show-much-work-ahead-more-inclusive-future">Weaker global flows show much work ahead for a more inclusive future</a></span>
               </div>
               {/* <ul className="podcasts_container">
                 <li>
