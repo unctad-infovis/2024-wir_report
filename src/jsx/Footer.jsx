@@ -49,10 +49,16 @@ function Footer() {
                   <a href="https://vimeo.com/842219366" target="_blank" rel="noreferrer">Kiswahili</a> */}
                 </li>
               </ul>
-              {/* <h4>Watch the press conference</h4>
+              <h4>Watch the press conference</h4>
               <div className="iframe_container youtube_iframe">
-                <iframe src="https://www.youtube.com/embed/rUR6isHC8MI" title="Wold Investment Report Press Conference" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-              </div> */}
+                <iframe src="https://www.youtube.com/embed/KArJUAIu_1U" title="Wold Investment Report Press Conference" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+              </div>
+              <h4>Download the video</h4>
+              <ul>
+                <li>
+                  <a href="https://vimeo.com/963117885" target="_blank" rel="noreferrer">English</a>
+                </li>
+              </ul>
             </div>
             <div className="footer_content anchor_podcasts" id="anchor_podcasts">
               <h3>Podcasts</h3>
