@@ -12,21 +12,21 @@ function Footer() {
               <div className="iframe_container youtube_iframe">
                 <iframe src="https://www.youtube.com/embed/OwrpyKlK1vw" title="Wold Investment Report" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
               </div>
-              <ul className="hidden">
+              <ul>
                 <li>
-                  <a href="https://youtu.be/sNY2fjq2E1w" target="_blank" rel="noreferrer">Français</a>
+                  <a href="https://youtu.be/dveoJFvh75c" target="_blank" rel="noreferrer">Français</a>
                   {', '}
-                  <a href="https://youtu.be/Yvzl8Pt9Ju8" target="_blank" rel="noreferrer">Español</a>
+                  <a href="https://youtu.be/Eyk2BGuykZ4" target="_blank" rel="noreferrer">Español</a>
                   {', '}
-                  <a href="https://youtu.be/XE3zpBBfdHk" target="_blank" rel="noreferrer">العربية</a>
+                  <a href="https://youtu.be/spfEEMhp0tE" target="_blank" rel="noreferrer">العربية</a>
                   {', '}
-                  <a href="https://youtu.be/H0p9rAsqwe4" target="_blank" rel="noreferrer">简体中文</a>
+                  <a href="https://youtu.be/Z0mLsHDSJ64" target="_blank" rel="noreferrer">简体中文</a>
                   {', '}
-                  <a href="https://youtu.be/UsmSbdv4JIU" target="_blank" rel="noreferrer">Русский</a>
+                  <a href="https://youtu.be/uddrYoU4M5s" target="_blank" rel="noreferrer">Русский</a>
                   {', '}
-                  <a href="https://youtu.be/ek-p4Hl7Pak" target="_blank" rel="noreferrer">Português</a>
+                  <a href="https://youtu.be/ipE9N75Ucio" target="_blank" rel="noreferrer">Português</a>
                   {', '}
-                  <a href="https://youtu.be/t-rzyvDCdkE" target="_blank" rel="noreferrer">Kiswahili</a>
+                  <a href="https://youtu.be/Y-RwTs9Sf0w" target="_blank" rel="noreferrer">Kiswahili</a>
                 </li>
               </ul>
               <h4>Download the report video</h4>
