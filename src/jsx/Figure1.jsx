@@ -151,13 +151,6 @@ function App() {
   }, [cleanData]);
 
   useEffect(() => {
-    const el = document.querySelector('[href="/data-visualization-search"]');
-    if (el) {
-      el.href = '/wir2023';
-    }
-  }, []);
-
-  useEffect(() => {
     if (document.querySelector('.title_container .unctad_logo img')) {
       document.querySelector('.title_container .unctad_logo img').src = '/themes/custom/newyork_b5/images/logo_small_white_en.png';
       document.querySelector('.title_container .unctad_logo img').style.width = '300px';
